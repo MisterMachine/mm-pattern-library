@@ -70,3 +70,15 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+# Middleman-deploy Gem settings (https://github.com/tvaughan/middleman-deploy):
+activate :deploy do |deploy|
+  deploy.method   = :rsync
+  deploy.host     = "mistermachineshop.com"
+  deploy.path     = "/var/www/mm-patterns"
+  deploy.user     = "root"
+  # Optional Settings
+  # deploy.port  = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+  # deploy.flags = "-rltgoDvzO --no-p --del -e" # add custom flags, default: -avze
+end
