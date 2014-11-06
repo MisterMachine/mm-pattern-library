@@ -8,7 +8,7 @@ var MM = (function() {
 
       this.initJS();
       //this.initBumpIt();
-      //this.initFoundation();
+      this.initFoundation();
       //this.initMenuEvents();
       //this.initFacebookShare();
       //this.initTabMasonry();
@@ -19,6 +19,10 @@ var MM = (function() {
 
     initJS: function() {
       $('body').addClass('js');
+    },
+
+    initFoundation: function() {
+      $(document).foundation();
     },
 
     initBumpIt: function() {
@@ -40,10 +44,6 @@ var MM = (function() {
         }
       }, 250);
 
-    },
-
-    initFoundation: function() {
-      $(document).foundation();
     },
 
     initFacebookShare: function() {

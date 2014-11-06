@@ -1,0 +1,54 @@
+<!-- hero post -->
+<header>
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>Loan Calculator</h1>
+    </div>
+  </div>
+</header>
+
+<div class="row">
+  <div class="large-12 columns rhythm">
+
+    <div ng-app>
+      <fieldset>
+        <div class="field-container">
+          <label for="text">Loan Amount <abbr title="Required">*</abbr></label>
+          <input id="text" type="number" placeholder="Enter a Number" pattern="[0-9]*">
+        </div>
+        <div class="field-container">
+          <label for="text">Interest Rate <abbr title="Required">*</abbr></label>
+          <input id="text" type="number" placeholder="Enter a Number" pattern="[0-9]*">
+        </div>
+        <div class="field-container">
+          <label for="text">Length of Loan (in years) <abbr title="Required">*</abbr></label>
+          <input id="text" type="number" placeholder="Enter a Number" pattern="[0-9]*">
+        </div>
+        <div class="field-container">
+          <label>Payment Freequency
+            <select>
+              <option value="husker">Husker</option>
+              <option value="starbuck">Starbuck</option>
+              <option value="hotdog">Hot Dog</option>
+              <option value="apollo">Apollo</option>
+            </select>
+          </label>
+        </div>
+        <div class="field-container">
+          <button class="button expand">Calculate</button>
+        </div>
+      </fieldset>
+
+      <div class="row">
+        <div class="large-12 columns rhythm">
+          <h2>$1,500.00</h2>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+</div>

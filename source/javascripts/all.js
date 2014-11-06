@@ -1,4 +1,4 @@
 //= require jquery/dist/jquery
+//= require foundation/js/foundation/foundation
 //= require angular/angular
-//= require foundation/js/foundation
 //= require app
