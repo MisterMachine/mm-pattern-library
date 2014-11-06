@@ -120,4 +120,5 @@ jQuery(document).ready(function() {
   MM.init();
 });
 
-
+// Angular modules
+var app = angular.module("loanCalculator", []);
