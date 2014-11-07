@@ -1,11 +1,24 @@
+form {
+  .note {
+    background-color: $wash-color;
+    position: relative;
+    padding: .25em .5em;
+    margin-top: -1rem;
+  }
+}
+
 fieldset {
   border: 0;
   padding: 0;
 } 
 
+.field-container {
+  margin-bottom: 1rem;
+}
+
 input[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: border-box; /* 2 */
-    box-sizing: border-box;
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: border-box; /* 2 */
+  box-sizing: border-box;
 }

@@ -206,7 +206,7 @@ dl dt, dl dd {
 }
 
 .serif {
-  font-family:$font-family;
+  font-family:$serif-font-family;
 }
 
 .sans {
@@ -231,6 +231,10 @@ dl dt, dl dd {
 
 .caps {
   text-transform: uppercase;
+}
+
+.small {
+    @include type-scale(tiny);
 }
 
 .light {
