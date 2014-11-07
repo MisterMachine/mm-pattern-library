@@ -1,14 +1,12 @@
 @import "settings";
 @import "foundation.scss";
-/*@import "compass/css3";*/
+@import "compass/css3";
+@import "compass/typography/vertical_rhythm";
 
-/*
 @import "base/all";
 @import "helpers/all";
-@import "layout/all";
-@import "modules/all";
+@import "structures/all";
+@import "layouts/all";
 @import "components/all";
 @import "pages/all";
-
-@import "app";
-*/
+@import "patterns/all";

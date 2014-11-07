@@ -131,7 +131,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  compass (~> 1.0.0.alpha.20)
+  compass (~> 1.0.1)
   middleman (~> 3.3.6)
   middleman-deploy
   middleman-livereload (~> 3.1.0)

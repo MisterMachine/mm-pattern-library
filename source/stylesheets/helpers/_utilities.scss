@@ -1,0 +1,31 @@
+// CSS Truncate
+%text-truncate {
+  text-overflow: ellipsis;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+// Hide Text
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+// Pseudo helper
+%has-pseudo {
+  position: relative;
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+  }
+}
