@@ -1,0 +1,40 @@
+.pattern-swatches {
+  .swatch {
+    border: 1px solid #efefef;
+    border-radius: 6px;
+    padding-top: 100px;
+    text-align: center;
+
+    p {
+      background-color: white;
+      font-size: .75em;
+      padding: .5rem;
+      position: relative;
+      margin-bottom: 0;
+      
+      span {
+        display: block;
+      }
+    }
+
+    &.primary {
+      background-color: $primary-color;
+    }
+
+    &.secondary {
+      background-color: $secondary-color;
+    }
+
+    &.wash {
+      background-color: $wash-color;
+    }
+
+    &.alert {
+      background-color: $alert-color;
+    }
+
+    &.success {
+      background-color: $success-color;
+    }
+  }
+}
