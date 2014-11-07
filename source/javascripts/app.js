@@ -8,7 +8,7 @@ var MM = (function() {
 
       this.initJS();
       //this.initBumpIt();
-      //this.initFoundation();
+      this.initFoundation();
       //this.initMenuEvents();
       //this.initFacebookShare();
       //this.initTabMasonry();

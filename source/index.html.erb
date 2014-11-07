@@ -1,31 +1,37 @@
 ---
 title: Mister Machine Patterns
 ---
-<div class="row">
-	<div class="large-8 medium-8 columns">
-		<h1>Mister Machine Patterns</h1>
 
-		<h5>Typography:</h5>
-
-		<div class="row">
-			<div class="large-12 columns rhythm">
-				<p class="medium no-margin">Primary font: "Helvetica", "Arial", sans-serif;</p>
-				<p class="medium no-margin">Secondary font: "Proxima Nova", "Helvetica", "Arial", sans-serif;</p>
+		<section class="pattern-section">
+			<div class="row">
+				<div class="large-12 columns rhythm">
+					<h5>Typography:</h5>
+					<p class="medium no-margin">Primary font: "Helvetica", "Arial", sans-serif;</p>
+					<p class="medium no-margin">Secondary font: "Proxima Nova", "Helvetica", "Arial", sans-serif;</p>
+				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="row">
-			<div class="large-12 columns rhythm">
-				<%= partial "partials/_pattern-headers" %>
+		<section class="pattern-section bright">
+			<div class="row">
+				<div class="large-12 columns rhythm">
+					<%= partial "partials/_pattern-headers" %>
+				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="row">
-			<div class="pattern large-12 columns">	
-				<%= partial "partials/_pattern-buttons" %>
-				<%= partial "partials/_pattern-forms" %>
+		<section class="pattern-section">
+			<div class="row">
+				<div class="pattern large-12 columns">	
+					<%= partial "partials/_pattern-buttons" %>
+				</div>
 			</div>
-		</div>
+		</section>
 
-	</div>
-</div>
+		<section class="pattern-section bright">
+			<div class="row">
+				<div class="pattern large-12 columns">
+					<%= partial "partials/_pattern-forms" %>
+				</div>
+			</div>
+		</section>	
