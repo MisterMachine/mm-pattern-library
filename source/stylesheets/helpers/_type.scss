@@ -1,0 +1,79 @@
+%small-text {
+  font-family: $sans-font-family;
+  color: #999;
+}
+
+%small-link {
+  color: $primary-color;
+  text-transform: uppercase;
+} 
+
+%post-text {
+  font-family: $sans-font-family;
+  color: #656868; 
+}
+
+
+.serif {
+  font-family:$serif-font-family;
+}
+
+.sans {
+  font-family:$sans-font-family;
+}
+
+.large {
+    @include type-scale(large);
+}
+
+.medium {
+    @include type-scale(medium);
+}
+
+.base {
+    @include type-scale(base);
+}
+
+.normal {
+
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.small {
+    @include type-scale(tiny);
+}
+
+.light {
+
+}
+
+.no-margin {
+
+}
+
+.h-sub {
+    color: $primary-color;
+}
+
+.two-column {
+    @media #{$medium-up} {
+        -moz-column-count: 2;
+        -moz-column-gap: 50px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 50px;
+
+        ul, dl {
+            -webkit-column-break-inside: avoid;
+            -moz-column-break-inside: avoid;
+            -moz-page-break-inside: avoid;
+            page-break-inside: avoid;
+        }
+    }
+}
+
+.more {
+    white-space: nowrap;
+}

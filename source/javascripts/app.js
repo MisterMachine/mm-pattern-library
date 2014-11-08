@@ -120,4 +120,8 @@ jQuery(document).ready(function() {
   MM.init();
 });
 
+$(function(){
+    $('pre').addClass('prettyprint');
+    prettyPrint();
+})();
 

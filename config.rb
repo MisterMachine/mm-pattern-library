@@ -47,6 +47,7 @@ end
 #
 # With alternative layout
 page "index.html", :layout => :patterns
+page "page-side-nav.html", :layout => :patterns
 #
 # A path which all have the same layout
 # with_layout :admin do
