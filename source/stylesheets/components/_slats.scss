@@ -1,0 +1,17 @@
+.slats {
+
+}
+
+.slat {
+  @include grid-row();
+  padding-bottom: 1rem;
+  
+  .slat-figure {
+    @include grid-column(2);
+    padding: 0;
+  }
+
+  .slat-header {
+    @include grid-column(10);
+  }
+}

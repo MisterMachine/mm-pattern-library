@@ -7,7 +7,14 @@
   &-header {
     border-bottom: 1px solid #efefef;
     margin-bottom: 1rem;
-    padding: 0 1rem;
+    padding: 1rem;
+  }
+
+  &-figure {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: -1rem;
+    overflow: hidden;
   }
 
   &-content {

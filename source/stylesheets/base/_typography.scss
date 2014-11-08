@@ -124,6 +124,7 @@ $type-weight: (
     margin-top: 0;
     @include margin-trailer(1);
     @include type-ligatures;
+    @include type-weight(bold);
     letter-spacing: .02em;
 }
 h1, .alpha {
@@ -157,8 +158,8 @@ p {
 }
 
 // Small
-small {
-    @include type-scale(small);
+small, .omega {
+    @include type-scale(tiny);
 }
 
 a {
