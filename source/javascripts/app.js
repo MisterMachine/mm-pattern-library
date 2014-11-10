@@ -14,11 +14,21 @@ var MM = (function() {
       //this.initTabMasonry();
       //this.initImageMasonry();
       this.initPosition();
+      this.initPrettyPrint();
 
     },
 
     initJS: function() {
       $('body').addClass('js');
+    },
+
+    initFoundation: function() {
+      $(document).foundation();
+    },
+
+    initPrettyPrint: function() {
+      $('pre').addClass('prettyprint');
+      prettyPrint();
     },
 
     initBumpIt: function() {
@@ -40,10 +50,6 @@ var MM = (function() {
         }
       }, 250);
 
-    },
-
-    initFoundation: function() {
-      $(document).foundation();
     },
 
     initFacebookShare: function() {
@@ -120,7 +126,5 @@ jQuery(document).ready(function() {
   MM.init();
 });
 
-$(function(){
-    $('pre').addClass('prettyprint');
-    prettyPrint();
-})();
+// Angular modules
+var app = angular.module("loanCalculator", []);
