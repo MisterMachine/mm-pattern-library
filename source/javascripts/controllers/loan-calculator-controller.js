@@ -30,8 +30,6 @@ angular.module("loanCalculator")
 
     $scope.total = total.toFixed(2);
 
-
-
   };
 
   $scope.total = function(){
