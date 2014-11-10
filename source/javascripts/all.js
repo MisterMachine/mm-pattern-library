@@ -2,4 +2,5 @@
 //= require angular/angular
 //= require foundation/js/foundation
 //= require google-code-prettify/bin/prettify.min.js
+//= require jquery-scrolltofixed.js
 //= require app
