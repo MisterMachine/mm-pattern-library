@@ -116,10 +116,12 @@ $include-html-global-classes: $include-html-classes;
 // $black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
+$primary-color:     #00baff !default;
+$secondary-color:   #2b3848 !default;
+$wash-color:        #efefef !default;
+$alert-color:       #eda92c !default;
+$success-color:     #0e4a77 !default;
+
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
@@ -447,7 +449,7 @@ $include-html-global-classes: $include-html-classes;
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
+$button-bg-color: $primary-color !default;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
