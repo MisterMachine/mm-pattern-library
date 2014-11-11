@@ -1,5 +1,6 @@
 //= require jquery/dist/jquery
 //= require foundation/js/foundation/foundation
+//= require foundation/js/foundation/foundation.offcanvas
 //= require google-code-prettify/bin/prettify.min.js
 //= require jquery-scrolltofixed.js
 //= require angular/angular
