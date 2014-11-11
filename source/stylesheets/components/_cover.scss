@@ -1,0 +1,20 @@
+// Full height and width image using background image
+
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  @media #{$large-up} {
+
+  }
+
+  @media #{$xlarge-up} {
+
+  } 
+}
