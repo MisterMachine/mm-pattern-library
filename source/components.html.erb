@@ -53,11 +53,50 @@ title: Mister Machine Patterns
     </section>
 
     <section class="pattern-section">
-      <h4 class="pattern-header">Cover</h4>
+      <header class="pattern-header">
+        <h4 class="pattern-title">Cover</h4>
+        <p class="zeta">A cover image fills the screen horizontally and vertically</p>
+      </header>
+
+      <section class="relative container">
+        <figure class="cover" style="background-image: url(http://placehold.it/2880x1620);">
+        </figure>
+      </section>
+
+      <footer><a href="component-cover.html" class="button">Preview Cover Image</a></footer>
+
+      <div class="code">
+        <xmp class="prettyprint lang-html sunburst">
+         <%= partial "components/_cover" %>
+        </xmp>
+      </div>  
     </section>
 
     <section class="pattern-section">
-      <h4 class="pattern-header">Hero</h4>
+      <header class="pattern-header">
+        <h4 class="pattern-title">Hero</h4>
+        <p class="zeta">A hero image is a full width image that responsivly scales to fit vertically. Often used to overlay headlines.</p>
+      </header>
+
+     <%= partial "components/_hero" %>
+
+      <div class="code">
+        <xmp class="prettyprint lang-html sunburst">
+         <%= partial "components/_hero" %>
+        </xmp>
+      </div> 
+
+    </section>
+
+    <section class="pattern-section">
+      <h4 class="pattern-header">Interchange</h4>
+
+      <section>
+        <figure>
+          <img data-interchange="[images/hero-full.jpg, (default)],[images/hero-large.jpg, (large)],[images/hero-retina.jpg, (retina)] ">
+        </figure>
+      </section>
+
     </section>
 
     <section class="pattern-section">

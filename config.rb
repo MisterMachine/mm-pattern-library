@@ -46,7 +46,7 @@ end
 # page "/path/to/file.html", :layout => false
 #
 # With alternative layout
-# page "index.html", :layout => :patterns
+page "component-cover.html", :layout => :full
 #
 # A path which all have the same layout
 # with_layout :admin do
