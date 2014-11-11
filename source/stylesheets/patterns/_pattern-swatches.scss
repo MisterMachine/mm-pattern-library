@@ -1,3 +1,72 @@
+$primary: $primary-color;
+$secondary: $secondary-color;
+$wash: $wash-color;
+$alert: $alert-color;
+$success: $success-color;
+
+/**
+ * This is a Sass map. It is neat.
+ * It's similar to a JSON array, with key value pairs.
+ * Not sure what's up with the syntax highlighting...
+ */
+$colors: (
+    primary: $primary,
+    secondary: $secondary,
+    wash: $wash,
+    alert: $alert,
+    success: $success,
+    ghost: $ghost,
+    snow: $snow,
+    vapor: $vapor,
+    white-smoke: $white-smoke,
+    silver: $silver,
+    smoke: $smoke,
+    gainsboro: $gainsboro,
+    iron: $iron,
+    base: $base,
+    aluminum: $aluminum,
+    jumbo: $jumbo,
+    monsoon: $monsoon,
+    steel: $steel,
+    charcoal: $charcoal,
+    tuatara: $tuatara,
+    oil: $oil,
+    jet: $jet
+);
+
+*:before, *:after{
+  box-sizing: border-box;
+}
+
+.color {
+  /**
+   * Here is where we use the Sass map declared above.
+   *
+   * Basic syntax example:
+   *
+   * @each [key], [value] in [map] {
+   *  .thing-#{key}
+   *    color: #{value}
+   * }
+   *
+   * For each key/value pair in the map, the @each function will run and output the code inside.
+   * Neato.
+   */
+  @each $color-name, $color-value in $colors {
+    &-#{$color-name}{
+      &.swatch {
+        background-color: $color-value;
+      
+        .color-label {
+          &:before{
+            content: '#{$color-value}';
+          }
+        }
+      }
+    }
+  }
+}
+
 .pattern-swatches {
   .swatch {
     border: 1px solid #efefef;
@@ -15,26 +84,6 @@
       span {
         display: block;
       }
-    }
-
-    &.primary {
-      background-color: $primary-color;
-    }
-
-    &.secondary {
-      background-color: $secondary-color;
-    }
-
-    &.wash {
-      background-color: $wash-color;
-    }
-
-    &.alert {
-      background-color: $alert-color;
-    }
-
-    &.success {
-      background-color: $success-color;
     }
   }
 }
