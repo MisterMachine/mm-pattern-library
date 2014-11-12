@@ -1,23 +1,18 @@
 // Full width image using background image
 
 .hero {
+  @extend %responsive-hero;
   @include margin-trailer(1.5);
   display: block;
   position: relative;
   width: 100%;
   overflow: hidden;
 
-  &.video {
-    background-color: transparent;
-  }
+  &-offset {
+    padding: 1rem;
 
-  @extend %responsive-hero;
-
-  .video-container {
-    @extend %responsive-hero;
-  }
-
-  @media #{$medium-up} {
-    @include margin-trailer(3);
+    @media #{$medium-up} {
+      padding: 2rem;
+    }  
   }
 }

@@ -1,0 +1,7 @@
+.overlay-hover {
+  @extend .overlay;
+  
+  figcaption {
+    @extend %hover-overlay;
+  }
+}
