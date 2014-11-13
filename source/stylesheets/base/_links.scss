@@ -1,0 +1,5 @@
+.hollow {
+  @extend %bound;
+  border: 1px solid $primary-color;
+  display: inline-block;
+}

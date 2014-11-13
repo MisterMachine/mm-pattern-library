@@ -16,8 +16,8 @@
 }
 
 // Compass Vertical Rhythm setup 
-$base-font-size: 20px;
-$base-line-height: 25px;
+$base-font-size: 16px;
+$base-line-height: 24px;
 $rhythm-unit: "rem";
 $rem-with-px-fallback: true;
 
@@ -35,31 +35,31 @@ html, body {
 $type-prefix: "t-";
 $type-scale: (
     tiny: (
-        font-size: 14px,
-        base-lines: 0.725
+        font-size: 11px,
+        base-lines: 0.625
     ),
     small: (
-        font-size: 16px,
-        base-lines: 0.825
+        font-size: 13px,
+        base-lines: 0.725
     ),
     base: (
-        font-size: 18px,
-        base-lines: 1
+        font-size: 15px,
+        base-lines: 0.825
     ),
     medium: (
-        font-size: 24px,
-        base-lines: 1.25
+        font-size: 18px,
+        base-lines: 0.95
     ),
     large: (
-        font-size: 28px,
-        base-lines: 1.458
+        font-size: 26px,
+        base-lines: 1.25
     ),
     xlarge: (
-        font-size: 36px,
-        base-lines: 1.875
+        font-size: 32px,
+        base-lines: 1.725
     ),
     xxlarge: (
-        font-size: 48px,
+        font-size: 40px,
         base-lines: 2
     )
 );
@@ -68,8 +68,8 @@ $type-weight: (
     thin: 200,
     light: 300,
     regular: 400,
-    bold: 700,
-    black: 900
+    semi: 600,
+    bold: 700
 );
 
 // A type scaling utility $type-scale map with the predefined values
@@ -153,6 +153,7 @@ p {
     @include hyphens(auto);
     @include type-ligatures;
     @include type-scale(base);
+    @include type-weight(light);
     font-family: $font-family;
     letter-spacing: .02em;
 }

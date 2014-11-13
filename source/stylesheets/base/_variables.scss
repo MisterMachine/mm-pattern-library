@@ -1,32 +1,5 @@
-@font-face {
-    font-family: 'CalibreWeb-Light';
-    src: url('../fonts/CalibreWeb-Light.eot');
-    src: url('../fonts/CalibreWeb-Light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/CalibreWeb-Light.woff') format('woff'),
-         url('../fonts/CalibreWeb-Light.ttf') format('truetype'),
-         url('../fonts/CalibreWeb-Light.svg#open_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'CalibreWeb-Semibold';
-    src: url('../fonts/CalibreWeb-Semibold.eot');
-    src: url('../fonts/CalibreWeb-Semibold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'CalibreWeb-Bold';
-    src: url('../fonts/CalibreWeb-Bold.eot');
-    src: url('../fonts/CalibreWeb-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/CalibreWeb-Bold.woff') format('woff'),
-         url('../fonts/CalibreWeb-Bold.ttf') format('truetype'),
-         url('../fonts/CalibreWeb-Bold.svg#open_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 
 // $BaseType
@@ -42,13 +15,13 @@ $h4-font-size: rem-calc(23) !default;
 $h5-font-size: rem-calc(18) !default;
 $h6-font-size: 1rem !default;
 
-$font-family: "CalibreWeb-Light", Helvetica, Arial, sans-serif;
+$font-family: "proxima-nova", "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
 $base-font-family: $font-family;
 $sans-font-family: $font-family;
-$sans-font-family-semibold: "CalibreWeb-Semibold", Helvetica, Arial, sans-serif;
-$sans-font-family-bold: "CalibreWeb-Bold", Helvetica, Arial, sans-serif;
+$sans-font-family-semibold: "proxima-nova", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-font-family-bold: "proxima-nova", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $alt-font-family: $sans-font-family-bold;
-$serif-font-family: Georgia, Times, serif;
+$serif-font-family: "freight-text-pro", "Lora", Georgia, Times, serif;
 
 // $Brand Colors
 $primary-color:     #00baff !default;

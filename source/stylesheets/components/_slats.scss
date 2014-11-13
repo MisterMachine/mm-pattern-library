@@ -3,6 +3,7 @@
 }
 
 .slat {
+  @extend %no-margin;
   @include grid-row();
   padding-bottom: 1rem;
   
@@ -13,5 +14,9 @@
 
   .slat-header {
     @include grid-column(10);
+  }
+
+  a {
+    color: $aluminum;
   }
 }

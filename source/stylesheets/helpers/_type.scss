@@ -13,6 +13,11 @@
   color: #656868; 
 }
 
+%no-margin {
+  #{h1, h2, h3, h4, h5, h6, p} {
+    margin-bottom: .25rem;
+  }
+}  
 
 .serif {
   font-family:$serif-font-family;
@@ -34,8 +39,20 @@
     @include type-scale(base);
 }
 
-.normal {
+.bold {
+  @include type-weight(bold);
+}
 
+.semi {
+  @include type-weight(semi);
+}
+
+.normal {
+  @include type-weight(regular);
+}
+
+.light {
+  @include type-weight(light);
 }
 
 .caps {
@@ -43,19 +60,26 @@
 }
 
 .small {
-    @include type-scale(tiny);
+  @include type-scale(tiny);
 }
 
-.light {
+.dim {
+  color: $aluminum;
+}
 
+.pill {
+  @extend %bound;
+  background-color: $iron;
+}
+
+%bound {
+  border-radius: $global-radius;
+  display: inline-block;
+  padding: .5em 1em;
 }
 
 .no-margin {
 
-}
-
-.h-sub {
-    color: $primary-color;
 }
 
 .two-column {

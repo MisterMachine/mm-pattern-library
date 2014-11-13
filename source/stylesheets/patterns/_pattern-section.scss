@@ -1,9 +1,25 @@
-.pattern-section {
-  border-bottom: 1px solid #ccc;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+.pattern {
+  &-section {
+    border-bottom: 1px solid #ccc;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
 
-  &.bright {
-    background-color: white;
+    &.bright {
+      background-color: white;
+    }
+  }
+
+  &-header {
+    border-bottom: 2px solid $ghost;
+    color: $iron;
+    margin-bottom: 1.5rem;
+
+    p {
+      margin-top: -1.5rem;
+    }
+  }
+
+  &-footer {
+    padding-top: 1.5rem;
   }
 }
