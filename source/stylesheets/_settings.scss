@@ -822,27 +822,27 @@ $input-include-glowing-effect: false;
 // $tabbar-header-margin: 0;
 
 // Off Canvas Menu Variables
-// $off-canvas-width: rem-calc(250);
-// $off-canvas-bg: $oil;
-// $off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
+$off-canvas-width: rem-calc(200);
+$off-canvas-bg: $white;
+$off-canvas-bg-hover: scale-color($smoke, $lightness: 30%);
 
 // Off Canvas Menu List Variables
 // $off-canvas-label-padding: 0.3rem rem-calc(15);
 // $off-canvas-label-color: $aluminum;
 // $off-canvas-label-text-transform: uppercase;
 // $off-canvas-label-font-size: rem-calc(12);
-// $off-canvas-label-font-weight: $font-weight-bold;
-// $off-canvas-label-bg: $tuatara;
-// $off-canvas-label-border-top: 1px solid scale-color($tuatara, $lightness: 14%);
+$off-canvas-label-font-weight: 300;
+$off-canvas-label-bg: $ghost;
+$off-canvas-label-border-top: 1px solid $smoke;
 // $off-canvas-label-border-bottom: none;
 // $off-canvas-label-margin:0;
-// $off-canvas-link-padding: rem-calc(10, 15);
-// $off-canvas-link-color: rgba($white, 0.7);
-// $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
-// $off-canvas-back-bg: $tuatara;
+$off-canvas-link-padding: rem-calc(10, 10);
+$off-canvas-link-color: $primary-color;
+$off-canvas-link-border-bottom: 0 solid scale-color($off-canvas-bg, $lightness: -25%);
+$off-canvas-back-bg: $smoke;
 // $off-canvas-back-border-top: $off-canvas-label-border-top;
 // $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
-// $off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
+$off-canvas-back-hover-bg: $wash-color;
 // $off-canvas-back-hover-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
 // $off-canvas-back-hover-border-bottom: none;
 

@@ -78,10 +78,6 @@
   padding: .5em 1em;
 }
 
-.no-margin {
-
-}
-
 .two-column {
     @media #{$medium-up} {
         -moz-column-count: 2;

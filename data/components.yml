@@ -1,0 +1,9 @@
+components:
+  - Story
+  - Excerpt
+  - Slats
+  - Cards
+  - Cover
+  - Hero
+  - Overlay
+  - Hovers

@@ -126,24 +126,10 @@ title: Mister Machine Patterns
   </div>
 
   <div class="medium-3 columns">
-    <ul class="side-nav">
-      <li><a href="#">Story</a></li>
-      <li><a href="#">Excerpt</a></li>
-      <li><a href="#">Slats</a></li>
-      <li><a href="#">Cards</a></li>
-      <li><a href="#">Cover</a></li>
-      <li><a href="#">Hero</a></li>
-      <li><a href="#">Hovers</a></li>
-      <li><a href="#">Overlays</a></li>
-      <li><a href="#">Messages</a></li>
-      <li><a href="#">Pagination</a></li>
-      <li><a href="#">Panel</a></li>
-      <li><a href="#">Search Bar</a></li>
-      <li><a href="#">Share</a></li>
-      <li><a href="#">Follow</a></li>
-      <li><a href="#">Tabs</a></li>
-      <li><a href="#">Tags</a></li>
-      <li><a href="#">Video</a></li>
+    <ul class="side-nav no-padding bg-white radius rhythm-up">
+      <% data.components.components.each do |item| %>
+      <li><a href="#"><%= item %></a></li>
+      <% end %>
     </ul>
   </div>
 </div>
