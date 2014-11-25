@@ -8,6 +8,7 @@
 //= require foundation/js/foundation/foundation.equalizer
 //= require google-code-prettify/bin/prettify.min.js
 //= require responsive-nav.js
+//= require wow.js
 //= require jquery-scrolltofixed.js
 //= require angular/angular
 //= require app
