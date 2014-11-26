@@ -137,3 +137,49 @@ wow = new WOW(
     }
   )
 wow.init();
+
+$(document).ready(function($) {
+var sceneOptions = {duration: 200, offset: -100};
+var elements = $("#tweens h3");
+var base = [];
+  base.controller = new ScrollMagic();
+
+  // fade
+  new ScrollScene(sceneOptions)
+    .addTo(base.controller)
+    .triggerHook("onCenter")
+    .triggerElement(elements[0])
+    .setTween(TweenMax.from(elements[0], 1, {autoAlpha: 0}));
+  
+  // move
+  new ScrollScene(sceneOptions)
+    .addTo(base.controller)
+    .triggerHook("onCenter")
+    .triggerElement(elements[1])
+    .setTween(TweenMax.from(elements[1], 1, {left: "-50%", marginLeft: -200, ease: Back.easeOut}));
+  
+  // spin
+  new ScrollScene(sceneOptions)
+    .offset(200)
+    .addTo(base.controller)
+    .triggerHook("onCenter")
+    .triggerElement(elements[1]) // use previous element as trigger, as top position changes during spin
+    .setTween(TweenMax.to(elements[2], 1, {rotation: 360}));
+  
+  // scale
+  new ScrollScene(sceneOptions)
+    .addTo(base.controller)
+    .triggerHook("onCenter")
+    .triggerElement(elements[3])
+    .setTween(TweenMax.from(elements[3], 1, {scale: 0, ease: Back.easeOut}));
+  
+  // text properties
+  $(elements[4]).wrapEach(/(.)/g, "<span>$1</span>");// wrap letters
+
+  new ScrollScene(sceneOptions)
+    .addTo(base.controller)
+    .triggerHook("onCenter")
+    .triggerElement(elements[4])
+    .setTween(TweenMax.staggerTo($(elements[4]).children("span"), 0.0001, {textDecoration: "underline", textTransform: "uppercase"}, 0.2));
+});
+
