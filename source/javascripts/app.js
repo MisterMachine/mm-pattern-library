@@ -10,6 +10,7 @@ var MM = (function() {
       //this.initBumpIt();
       this.initFoundation();
       //this.initMenuEvents();
+      this.loadType();
       //this.initFacebookShare();
       //this.initTabMasonry();
       //this.initImageMasonry();
@@ -24,6 +25,11 @@ var MM = (function() {
 
     initFoundation: function() {
       $(document).foundation();
+    },
+
+    loadType: function(){
+      var Typekit = window.Typekit || {};
+      try{Typekit.load();}catch(e){}
     },
 
     initPrettyPrint: function() {

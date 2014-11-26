@@ -1,0 +1,35 @@
+
+  <div ng-app="loanCalculator" ng-controller="LoanCalculatorController">
+    <fieldset>
+      <div class="field-container">
+        <label for="text">Loan Amount <abbr title="Required">*</abbr></label>
+        <input name="amount" type="number" placeholder="Enter a Number" pattern="[0-9]*" ng-model="amount">
+      </div>
+      <div class="field-container">
+        <label for="text">Interest Rate <abbr title="Required">*</abbr></label>
+        <input name="interest" type="number" placeholder="Enter a Number" pattern="[0-9]*" ng-model="interest">
+      </div>
+      <div class="field-container">
+        <label for="text">Length of Loan (in years) <abbr title="Required">*</abbr></label>
+        <input name="years" type="number" placeholder="Enter a Number" pattern="[0-9]*" ng-model="years">
+      </div>
+      <div class="field-container">
+        <label>Payment Freequency
+          <select ng-model="freequency">
+            <option value="annually">Annually</option>
+            <option value="semiannually">Semiannually</option>
+            <option value="quarterly">Quarterly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </label>
+      </div>
+      <div class="field-container">
+        <button class="button expand" ng-click="calculate()">Calculate</button>
+      </div>
+    </fieldset>
+    <div class="row">
+      <div class="large-12 columns rhythm">
+        <h2>{{total | currency}}</h2>
+      </div>
+    </div>
+  </div>

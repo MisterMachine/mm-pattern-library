@@ -7,41 +7,15 @@
     <title><%= current_page.data.title || "Mister Machine Patterns" %></title>
     <%= stylesheet_link_tag "style" %>
     <%= javascript_include_tag  "all" %>
-
     <script src="//use.typekit.net/wrn0dva.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
   </head>
   
   <body class="<%= page_classes %>">
     <div class="off-canvas-wrap" data-offcanvas>
       <div class="inner-wrap">
-      <nav class="top-left">
-      <a class="left-off-canvas-toggle hollow" href="#"><span class="icon-menu"></span></a>
-      </nav>
+      <%= partial "partials/_nav-top" %>
 
-      <!-- <nav class="tab-bar">
-        <section class="left-small">
-          <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-        </section>
-
-        <section class="middle tab-bar-section">
-          <h1>Machine Patterns</h1>
-        </section>
-      </nav> -->
-      
-      <aside class="left-off-canvas-menu">
-        <ul class="off-canvas-list">
-          <li><label>Patterns</label></li>
-          <li><a href="/">Styles</a></li>
-          <li><a href="components.html">Components</a></li>
-          <li><a href="foundation.html">Foundation</a></li>
-<!--           <li><a href="wordpress.html">WordPress</a></li>
-          <li><a href="type.html">Type Specimen</a></li> -->
-          <li class="rhythm-up"><label>Prototypes</label></li>
-          <li><a href="angular-test.html">Angular Test</a></li>
-          <li><a href="geolocation.html">Geolocation</a></li>
-        </ul>
-      </aside>  
+      <%= partial "partials/_nav-off-canvas" %>
 
       <%= yield %>
 
