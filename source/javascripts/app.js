@@ -129,4 +129,11 @@ jQuery(document).ready(function() {
 // Angular modules
 var app = angular.module("loanCalculator", []);
 
-new WOW().init();
+wow = new WOW(
+    {
+      boxClass:     'wow',      // default
+      animateClass: 'animated', // default
+      offset:       '100'          // default
+    }
+  )
+wow.init();
