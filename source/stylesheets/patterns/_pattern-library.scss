@@ -4,3 +4,58 @@
   }
 }
 
+.stack {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+
+  figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.structure {
+  @include grid-row();
+
+  .cell {
+    @extend .panel;
+    padding-top: 4rem;
+    margin-bottom: .5rem;
+    border-radius: 5px;
+  }
+
+  %cell-large {
+    @include grid-column(12);
+
+    @media #{$medium-up} {
+      @include grid-column(8);
+    }
+  }
+
+  %cell-small {
+    @include grid-column(12);
+
+    @media #{$medium-up} {
+      @include grid-column(4);
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .hdp-data-systems,
+  .hdp-applications {
+    @extend %cell-large;
+  }
+
+  .hdp-aside-tools {
+    @extend %cell-small;
+
+    @media #{$medium-up} {
+      padding: 0;
+      margin: 1rem 0;
+      right: 1rem;
+    }
+  }
+}
