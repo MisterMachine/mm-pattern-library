@@ -24,11 +24,13 @@
 }
 #pin #draw {
   width: 500px;
-  height: 150px;
+  height: 350px;
   top: 50%;
   left: 50%;
   margin-top: -75px;
   margin-left: -250px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   position: absolute;
 
 }
@@ -37,7 +39,7 @@
   stroke-linejoin: round;
   fill: none;
   stroke: #000000;
-  stroke-width: 5;
+  stroke-width: 1;
 }
 #pin #wipe {
   height: 100%;
