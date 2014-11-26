@@ -10,8 +10,9 @@
   position: relative;
 }
 #pin {
-  width: 100%;
+  width: 100% !important;
   overflow: hidden;
+  height: 100vh;
 }
 #pin h3 {
   font-size: 80px;
@@ -70,6 +71,7 @@
   margin-bottom: 250px;
   position: relative;
   overflow: hidden;
+  height: 100vh;
 }
 #parallax h3 {
   font-size: 80px;
@@ -86,19 +88,19 @@
   top: 50%;
   width: 100%;
   margin-top: -150px;
-  background-image: url("../img/demo_parallax_bg.png");
+  background-image: url("/images/pattern.png");
 }
 #parallaxbg .top {
   height: 10px;
   width: 100%;
   position: absolute;
   top: 0;
-  background-image: url("../img/demo_parallax_shadow_top.png");
+  background-image: url("/images/pattern.png");
 }
 #parallaxbg .bottom {
   height: 10px;
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-image: url("../img/demo_parallax_shadow_bottom.png");
+  background-image: url("/images/pattern.png");
 }
