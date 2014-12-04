@@ -4,18 +4,32 @@
 
 // config/_breakpoints.scss
 $breakpoints: (
-  small:    480px,
-  medium:   720px,
-  large:    960px,
-  x-large:  1280px
+  small:    $small-top,
+  medium:   $medium-top,
+  large:    $large-top,
+  x-large:  $xlarge-top
 );
+
+$type-weight: (
+    thin: 200,
+    light: 300,
+    regular: 400,
+    semi: 600,
+    bold: 700
+);
+
+// A simple type-weight mixin
+// ex. @include type-weight(strong);
+@mixin type-weight($weight) {
+    font-weight: map-get($type-weight, $weight);
+}
 
 // config/_typography.scss
 $text-sizing: (
   centi: (
     small: (
       font-size: 0.75rem,
-      line-height: 1
+      line-height: 1em
     )
   ),
   deci: (
@@ -133,6 +147,10 @@ $text-sizing: (
 }
 
 // _typography.scss
+#{h1, h2, h3, h4, h5, h6} {
+  margin-top: 0;
+}  
+
 h1,
 .alpha {
   @include responsive-text-size("mega");
@@ -164,7 +182,12 @@ body,
   @include responsive-text-size("deci");
 }
 
+p {
+  margin-top: 0;
+}
+
 small,
 .omega {
   @include responsive-text-size("centi");
 }
+

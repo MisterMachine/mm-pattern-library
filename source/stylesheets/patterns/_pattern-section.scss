@@ -1,4 +1,5 @@
 .pattern {
+
   &-section {
     border-bottom: 1px solid #ccc;
     padding-bottom: 3rem;
@@ -11,11 +12,15 @@
   &-header {
     border-bottom: 2px solid $ghost;
     color: $iron;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem 0;
 
     p {
       //margin-top: -1.5rem;
     }
+  }
+
+  &-title {
+    margin-top: 1.5rem;
   }
 
   &-footer {

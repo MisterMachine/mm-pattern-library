@@ -40,19 +40,19 @@
 }
 
 .bold {
-//  @include type-weight(bold);
+   @include type-weight(bold);
 }
 
 .semi {
-//  @include type-weight(semi);
+   @include type-weight(semi);
 }
 
 .normal {
-//  @include type-weight(regular);
+  @include type-weight(regular);
 }
 
 .light {
-//  @include type-weight(light);
+  @include type-weight(light);
 }
 
 .caps {
@@ -76,6 +76,7 @@
   border-radius: $global-radius;
   display: inline-block;
   padding: .5em 1em;
+  vertical-align: middle;
 }
 
 .two-column {
