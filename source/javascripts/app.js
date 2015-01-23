@@ -141,7 +141,7 @@ wow = new WOW(
       animateClass: 'animated', // default
       offset:       '100'          // default
     }
-  )
+  );
 wow.init();
 
 $(document).ready(function($) {
