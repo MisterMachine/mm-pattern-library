@@ -5,15 +5,17 @@
 .slat {
   @extend %no-margin;
   @include grid-row();
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
   padding-bottom: 1rem;
   
   .slat-figure {
-    @include grid-column(2);
-    padding: 0;
+    float: left;
+    margin-right: 1em;
   }
 
   .slat-header {
-    @include grid-column(10);
+    overflow: auto;
   }
 
   a {

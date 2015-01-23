@@ -8,12 +8,12 @@
 $base-font-size: 16px;
 $base-line-height: 24px;
 
-$h1-font-size: rem-calc(44) !default;
-$h2-font-size: rem-calc(37) !default;
-$h3-font-size: rem-calc(27) !default;
-$h4-font-size: rem-calc(23) !default;
-$h5-font-size: rem-calc(18) !default;
-$h6-font-size: 1rem !default;
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(37);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
 
 $font-family: "proxima-nova", "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
 $base-font-family: $font-family;
@@ -24,8 +24,8 @@ $alt-font-family: $sans-font-family-bold;
 $serif-font-family: "freight-text-pro", "Lora", Georgia, Times, serif;
 
 // $Brand Colors
-$primary-color:     #00baff !default;
-$secondary-color:   #2b3848 !default;
-$wash-color:        #efefef !default;
-$alert-color:       #eda92c !default;
-$success-color:     #0e4a77 !default;
+$primary-color:     #00baff;
+$secondary-color:   #2b3848;
+$wash-color:        #efefef;
+$alert-color:       #eda92c;
+$success-color:     #0e4a77;

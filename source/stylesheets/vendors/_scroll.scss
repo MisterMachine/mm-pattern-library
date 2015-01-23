@@ -9,11 +9,13 @@
   margin: 0 auto 200px auto;
   position: relative;
 }
+
 #pin {
   width: 100% !important;
   overflow: hidden;
   height: 100vh;
 }
+
 #pin h3 {
   font-size: 80px;
   text-align: center;
@@ -22,23 +24,27 @@
   top: 50%;
   line-height: 80px;
 }
+
 #pin #draw {
   width: 500px;
-  height: 150px;
+  height: 350px;
   top: 50%;
   left: 50%;
   margin-top: -75px;
   margin-left: -250px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   position: absolute;
-
 }
+
 #pin #draw path {
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
   stroke: #000000;
-  stroke-width: 5;
+  stroke-width: 1;
 }
+
 #pin #wipe {
   height: 100%;
   width: 0%;
@@ -47,9 +53,11 @@
   background-color: #2e639e;
   overflow: hidden;
 }
+
 #pin #wipe h3 {
   color: #FFFFFF;
 }
+
 #pin #slide {
   height: 100%;
   width: 100%;
@@ -57,10 +65,12 @@
   position: absolute;
   background-color: #c7e1ff;
 }
+
 #pin #slide h3 {
   position: absolute;
   width: 100%;
 }
+
 #pin h3#unpin {
   margin-top: 10px;
   position: absolute;
@@ -73,6 +83,7 @@
   overflow: hidden;
   height: 100vh;
 }
+
 #parallax h3 {
   font-size: 80px;
   text-align: center;
@@ -82,6 +93,7 @@
   width: 100%;
   line-height: 80px;
 }
+
 #parallax #parallaxbg {
   position: absolute;
   height: 300px;
@@ -90,6 +102,7 @@
   margin-top: -150px;
   background-image: url("/images/pattern.png");
 }
+
 #parallaxbg .top {
   height: 10px;
   width: 100%;
@@ -97,6 +110,7 @@
   top: 0;
   background-image: url("/images/pattern.png");
 }
+
 #parallaxbg .bottom {
   height: 10px;
   width: 100%;

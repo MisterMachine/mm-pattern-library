@@ -1,3 +1,11 @@
+a {
+  color: $primary-color;
+}
+
+a:hover, a:visited {
+
+}
+
 .hollow {
   @extend %bound;
   border: 1px solid $primary-color;

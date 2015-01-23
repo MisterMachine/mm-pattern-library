@@ -1,67 +1,13 @@
-@include establish-baseline;
+// ----
+// Sass (v3.4.7)
+// ----
 
-@function map-fetch($map, $keys) {
-  $key: nth($keys, 1);
-  $length: length($keys);
-  $value: map-get($map, $key);
-  @if ($length > 1) {
-    $rest: ();
-    @for $i from 2 through $length {
-      $rest: append($rest, nth($keys, $i))
-    }
-    @return map-fetch($value, $rest)
-  } @else {
-    @return $value;
-  }
-}
-
-// Compass Vertical Rhythm setup 
-$base-font-size: 16px;
-$base-line-height: 24px;
-$rhythm-unit: "rem";
-$rem-with-px-fallback: true;
-
-html, body {
-    font-size: 20px;
-    font-family: $font-family;
-    background-color: $wash-color;
-    -webkit-font-kerning:normal;
-}
-
-// The type-scale Map contains the whole type scale.
-// Add your own sizes or modify these, they will be available in the type-scale mixin for use.
-
-// Default Sizes
-$type-prefix: "t-";
-$type-scale: (
-    tiny: (
-        font-size: 11px,
-        base-lines: 0.625
-    ),
-    small: (
-        font-size: 13px,
-        base-lines: 0.725
-    ),
-    base: (
-        font-size: 15px,
-        base-lines: 0.825
-    ),
-    medium: (
-        font-size: 18px,
-        base-lines: 0.95
-    ),
-    large: (
-        font-size: 26px,
-        base-lines: 1.25
-    ),
-    xlarge: (
-        font-size: 32px,
-        base-lines: 1.725
-    ),
-    xxlarge: (
-        font-size: 40px,
-        base-lines: 2
-    )
+// config/_breakpoints.scss
+$breakpoints: (
+  small:    $small-top,
+  medium:   $medium-top,
+  large:    $large-top,
+  x-large:  $xlarge-top
 );
 
 $type-weight: (
@@ -72,134 +18,176 @@ $type-weight: (
     bold: 700
 );
 
-// A type scaling utility $type-scale map with the predefined values
-
- // Each loop that outputs all of the type scales as placeholders with their type-prefix
- // ex. %t-tiny, %t-small
-@each $scale in map-keys($type-scale) {
-    %#{$type-prefix}#{$scale} {
-        @include adjust-font-size-to (
-            map-fetch($type-scale, $scale font-size),   
-            map-fetch($type-scale, $scale base-lines)
-        );
-    }
-}
-
-// A mixin for using type scale
-// Parameters: 
-// $scale (tiny, small...) 
-// $extend (boolean) - true by default, if needed inside media query use false to @include the content instead of @extend
-// ex. @include type-scale(small) or @include type-scale(small, false) for use inside media queries. 
-
-@mixin type-scale($scale, $extend: false, $map: $type-scale) {
-    @if $extend {
-        @extend %#{$type-prefix}#{$scale};
-    }
-    @else {
-        @include adjust-font-size-to(
-            map-fetch($map, $scale font-size),
-            map-fetch($map, $scale base-lines)
-        );
-    }
-}
-
 // A simple type-weight mixin
 // ex. @include type-weight(strong);
 @mixin type-weight($weight) {
     font-weight: map-get($type-weight, $weight);
 }
 
-// A quick ligature mixin, to be updated with a more modular one
-@mixin type-ligatures() {
-    -moz-font-feature-settings: "liga=1, dlig=1";
-    -ms-font-feature-settings: "liga", "dlig";
-    -webkit-font-feature-settings: "liga", "dlig";
-    -o-font-feature-settings: "liga", "dlig";
-    font-feature-settings: "liga", "dlig";
+// config/_typography.scss
+$text-sizing: (
+  centi: (
+    small: (
+      font-size: 0.75rem,
+      line-height: 1em
+    )
+  ),
+  deci: (
+    small: (
+      font-size: 0.875rem,
+      line-height: 1.25
+    )
+  ),
+  base: (
+    small: (
+      font-size: 1rem,
+      line-height: 1.25
+    ),
+    medium: (
+      font-size: 1rem,
+      line-height: 1.375
+    )
+  ),
+  deca: (
+    small: (
+      font-size: 1.125rem,
+      line-height: 1.111
+    ),
+    medium: (
+      font-size: 1.125rem,
+      line-height: 1.222
+    )
+  ),
+  hecto: (
+    small: (
+      font-size: 1.375rem,
+      line-height: 1.136
+    ),
+    medium: (
+      font-size: 1.5rem,
+      line-height: 1.25
+    ),
+    large: (
+      font-size: 1.75rem,
+      line-height: 1.25
+    )
+  ),
+  kilo: (
+    small: (
+      font-size: 1.625rem,
+      line-height: 1.154
+    ),
+    medium: (
+      font-size: 2rem,
+      line-height: 1.25
+    ),
+    large: (
+      font-size: 2.25rem,
+      line-height: 1.25
+    )
+  ),
+  mega: (
+    small: (
+      font-size: 2rem,
+      line-height: 1.25
+    ),
+    medium: (
+      font-size: 2.5rem,
+      line-height: 1.125
+    ),
+    large: (
+      font-size: 3rem,
+      line-height: 1.05
+    )
+  )
+);
+
+// lib/functions/_responsive.scss
+@function breakpoint($breakpoint-name) {
+  @return map-get($breakpoints, $breakpoint-name);
 }
 
-// Headings
-#{h1, h2, h3, h4, h5, h6} {
-    font-family: $base-font-family;
-    margin-top: 0;
-    @include margin-trailer(1);
-    @include type-ligatures;
-    @include type-weight(bold);
-    letter-spacing: .02em;
-}
-h1, .alpha {
-    @include type-scale(xxlarge);
-}
-h2, .beta {
-    @include type-scale(xlarge);
-}
-h3, .gamma {
-    @include type-scale(large);
-}
-h4, .delta {
-    @include type-scale(medium);
-}
-h5, .epsilon {
-    @include type-scale(base);
-}
-h6, .zeta {
-    @include type-scale(small);
+// lib/functions/_typography.scss
+@function text-breakpoints-for($text-size) {
+  @return map-get($text-sizing, $text-size);
 }
 
-// Paragraphs
-p {
-    @include margin-trailer(1);
-    @include word-break(break-word);
-    @include hyphens(auto);
-    @include type-ligatures;
-    @include type-scale(base);
-    @include type-weight(light);
-    font-family: $font-family;
-    letter-spacing: .02em;
+@function text-properties-for($text-size, $breakpoint-name) {
+  $text-breakpoints-map: text-breakpoints-for($text-size);
+  @return map-get($text-breakpoints-map, $breakpoint-name);
 }
 
-// Small
-small, .omega {
-    @include type-scale(tiny);
-}
-
-a {
-  color: $primary-color;
-    text-decoration: none;
-    letter-spacing: .02em;
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
-
-    &:hover {
-
-    }
-
-    &.dim {
-        color: #333;
-
-        &:hover {
-            color: $primary-color;
-        }
-    }
-}
-
-blockquote {
-  
-  p {
-
+// lib/mixins/_responsive.scss
+@mixin respond-above($breakpoint-name) {
+  @media screen and (min-width: breakpoint($breakpoint-name)) {
+    @content;
   }
 }
 
-ul, ul li ul {
-    list-style: none;
-    margin: 0;
-    @include type-scale(base);
-    letter-spacing: .04em;
+// lib/mixins/_typography.scss
+@mixin text-size($text-size, $breakpoint-name: "small") {
+  $text-size-properties: text-properties-for($text-size, $breakpoint-name);
+  font-size: map-get($text-size-properties, "font-size");
+  line-height: map-get($text-size-properties, "line-height");
 }
 
-dl dt, dl dd {
-    margin: 0;
-    @include type-scale(base);
-    letter-spacing: .04em;
+@mixin responsive-text-size($text-size, $default-breakpoint: "small") {
+  @include text-size($text-size, $default-breakpoint);
+
+  $text-breakpoints-map: text-breakpoints-for($text-size);
+  $text-breakpoints-keys: map-keys($text-breakpoints-map);
+
+  @each $breakpoint-name in $text-breakpoints-keys {
+    @if $breakpoint-name != $default-breakpoint and breakpoint($breakpoint-name) != null {
+      @include respond-above($breakpoint-name) {
+        @include text-size($text-size, $breakpoint-name);
+      }
+    }
+  }
+}
+
+// _typography.scss
+#{h1, h2, h3, h4, h5, h6} {
+  margin-top: 0;
+}  
+
+h1,
+.alpha {
+  @include responsive-text-size("mega");
+}
+
+h2,
+.beta {
+  @include responsive-text-size("kilo");
+}
+
+h3,
+.gamma {
+  @include responsive-text-size("hecto");
+}
+
+h4,
+.delta {
+  @include responsive-text-size("deca");
+}
+
+h5,
+h6,
+body,
+.epsilon {
+  @include responsive-text-size("base");
+}
+
+.zeta {
+  @include responsive-text-size("deci");
+}
+
+p {
+  margin-top: 0;
+}
+
+small,
+.omega {
+  @include responsive-text-size("centi");
 }
 
