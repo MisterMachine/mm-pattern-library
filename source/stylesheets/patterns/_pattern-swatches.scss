@@ -42,18 +42,11 @@ $colors: (
   /**
    * Here is where we use the Sass map declared above.
    *
-   * Basic syntax example:
-   *
-   * @each [key], [value] in [map] {
-   *  .thing-#{key}
-   *    color: #{value}
-   * }
-   *
    * For each key/value pair in the map, the @each function will run and output the code inside.
    * Neato.
    */
   @each $color-name, $color-value in $colors {
-    &-#{$color-name}{
+    &-#{$color-name} {
       &.swatch {
         background-color: $color-value;
       

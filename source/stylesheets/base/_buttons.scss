@@ -1,6 +1,7 @@
 // See _settings.scss
 
-button, .button {
+button,
+.button {
   @include button;
   
   &.hollow {

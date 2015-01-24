@@ -21,20 +21,20 @@ $type-weight: (
 // A simple type-weight mixin
 // ex. @include type-weight(strong);
 @mixin type-weight($weight) {
-    font-weight: map-get($type-weight, $weight);
+  font-weight: map-get($type-weight, $weight);
 }
 
 // config/_typography.scss
 $text-sizing: (
   centi: (
     small: (
-      font-size: 0.75rem,
+      font-size: .75rem,
       line-height: 1em
     )
   ),
   deci: (
     small: (
-      font-size: 0.875rem,
+      font-size: .875rem,
       line-height: 1.25
     )
   ),
@@ -125,13 +125,13 @@ $text-sizing: (
 }
 
 // lib/mixins/_typography.scss
-@mixin text-size($text-size, $breakpoint-name: "small") {
+@mixin text-size($text-size, $breakpoint-name: 'small') {
   $text-size-properties: text-properties-for($text-size, $breakpoint-name);
-  font-size: map-get($text-size-properties, "font-size");
-  line-height: map-get($text-size-properties, "line-height");
+  font-size: map-get($text-size-properties, 'font-size');
+  line-height: map-get($text-size-properties, 'line-height');
 }
 
-@mixin responsive-text-size($text-size, $default-breakpoint: "small") {
+@mixin responsive-text-size($text-size, $default-breakpoint: 'small') {
   @include text-size($text-size, $default-breakpoint);
 
   $text-breakpoints-map: text-breakpoints-for($text-size);
@@ -153,33 +153,33 @@ $text-sizing: (
 
 h1,
 .alpha {
-  @include responsive-text-size("mega");
+  @include responsive-text-size('mega');
 }
 
 h2,
 .beta {
-  @include responsive-text-size("kilo");
+  @include responsive-text-size('kilo');
 }
 
 h3,
 .gamma {
-  @include responsive-text-size("hecto");
+  @include responsive-text-size('hecto');
 }
 
 h4,
 .delta {
-  @include responsive-text-size("deca");
+  @include responsive-text-size('deca');
 }
 
 h5,
 h6,
 body,
 .epsilon {
-  @include responsive-text-size("base");
+  @include responsive-text-size('base');
 }
 
 .zeta {
-  @include responsive-text-size("deci");
+  @include responsive-text-size('deci');
 }
 
 p {
@@ -188,6 +188,5 @@ p {
 
 small,
 .omega {
-  @include responsive-text-size("centi");
+  @include responsive-text-size('centi');
 }
-
