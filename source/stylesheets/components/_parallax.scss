@@ -1,0 +1,25 @@
+.demo {
+  text-align: center;
+  background-image: url("../images/example_bg_spacer_v.gif");
+}
+
+.box {
+  border-radius: 8px;
+  display: inline-block;
+  padding: 0 5px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 50px;
+  margin: 25px auto 25px auto;
+  text-align: center;
+}
+
+.spacer {
+  min-height: 400px;
+}
+
+.trigger {
+  height: 1px;
+}

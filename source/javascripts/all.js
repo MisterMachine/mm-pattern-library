@@ -9,12 +9,12 @@
 //= require google-code-prettify/bin/prettify.min.js
 //= require responsive-nav.js
 //= require wow.js
-/* require TweenMax.min.js */
+//= require TweenMax.min.js
 //= require SnapPlugin.js
 //= require snap.svg.js
 //= require jquery.scrollmagic.js
 //= require jquery-scrolltofixed.js
 //= require angular/angular
 //= require app
-/* require demo */
+//= require demo-scroll
 //= require controllers/loan-calculator-controller
