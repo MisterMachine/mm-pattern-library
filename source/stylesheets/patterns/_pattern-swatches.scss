@@ -34,7 +34,7 @@ $colors: (
     jet: $jet
 );
 
-*:before, *:after{
+*:before, *:after {
   box-sizing: border-box;
 }
 
@@ -51,7 +51,7 @@ $colors: (
         background-color: $color-value;
       
         .color-label {
-          &:before{
+          &:before {
             content: '#{$color-value}';
           }
         }
@@ -68,7 +68,7 @@ $colors: (
     text-align: center;
 
     p {
-      background-color: white;
+      background-color: #fff;
       font-size: .75em;
       padding: .5rem;
       position: relative;
